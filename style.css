@@ -1052,9 +1052,9 @@ body.menu-open {
   }
 }
 
-/* Section */
 .section {
   padding: 48px 0;
+  margin: 24px 0 0;
 }
 
 .section--dark {
@@ -1104,7 +1104,7 @@ body.menu-open {
 .section__subtitle {
   color: var(--text-light);
   font-size: 18px;
-  margin-bottom: 0;
+  margin-bottom: 16px !important;
 }
 
 .section__icon {
