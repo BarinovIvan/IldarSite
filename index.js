@@ -176,6 +176,99 @@ $(document).ready(function() {
     $('.ui.dropdown').dropdown();
     $('.ui.accordion').accordion();
     $('.ui.popup').popup();
-    
-    console.log('Сайт Ильдара инициализирован успешно');
+
+    // Переключение табов в секции benefits с анимацией
+    const $benefitsSection = $('#benefits');
+    const $benefitsGrid = $benefitsSection.find('.grid');
+    const $benefitsTabs = $('.benefits__tab');
+    const $benefitsCols = $('.benefits__col');
+    let isBenefitsAnimating = false;
+
+    function getActiveCol() {
+        return $benefitsCols.filter('.is-active').first();
+    }
+
+    function setGridHeightTo($element) {
+        const height = $element.outerHeight(true);
+        $benefitsGrid.css('height', height);
+    }
+
+    function resetGridHeight() {
+        $benefitsGrid.css('height', '');
+    }
+
+    function isMobileViewport() {
+        return window.matchMedia('(max-width: 767px)').matches;
+    }
+
+    if (isMobileViewport()) {
+        const $initial = getActiveCol();
+        if ($initial.length) setGridHeightTo($initial);
+    }
+
+    $(window).on('resize', function() {
+        if (!isMobileViewport()) {
+            resetGridHeight();
+        } else {
+            const $current = getActiveCol();
+            if ($current.length) setGridHeightTo($current);
+        }
+    });
+
+    $benefitsTabs.on('click', function() {
+        const target = $(this).data('target');
+        const $current = getActiveCol();
+        const $next = $benefitsCols.filter(`.benefits__col--${target}`).first();
+
+        if (!$next.length || $next.is($current)) {
+            $benefitsTabs.removeClass('is-active');
+            $(this).addClass('is-active');
+            return; // ничего не делаем, если уже активна
+        }
+
+        $benefitsTabs.removeClass('is-active');
+        $(this).addClass('is-active');
+
+        if (!isMobileViewport()) {
+            $benefitsCols.removeClass('is-active');
+            $next.addClass('is-active');
+            return;
+        }
+
+        if (isBenefitsAnimating) return;
+        isBenefitsAnimating = true;
+      
+        const currentIsBefore = $current.hasClass('benefits__col--before');
+        const nextIsBefore = $next.hasClass('benefits__col--before');
+        const forward = currentIsBefore && !nextIsBefore; 
+        const direction = forward ? 'right' : 'left';
+        
+        $next.removeClass('is-active is-leaving is-entering from-left from-right to-left to-right');
+        $current.removeClass('is-leaving is-entering from-left from-right to-left to-right');
+       
+        $next.addClass('is-entering').addClass(forward ? 'from-right' : 'from-left');
+       
+        setGridHeightTo($current);
+        
+        const targetHeight = $next.outerHeight(true);
+                
+        $next[0].offsetHeight;
+        
+        requestAnimationFrame(() => {  
+            $current.addClass('is-leaving').addClass(forward ? 'to-left' : 'to-right').removeClass('is-active');   
+            $next.addClass('is-active').removeClass('from-left from-right');
+            $benefitsGrid.css('height', targetHeight);
+        });
+
+        const onTransitionEnd = (e) => {
+            if (e.target !== $next[0] && e.target !== $current[0]) return;
+            $next.removeClass('is-entering');
+            $current.removeClass('is-leaving to-left to-right');
+            isBenefitsAnimating = false;
+            
+        };
+
+        $next.one('transitionend', onTransitionEnd);
+        $current.one('transitionend', onTransitionEnd);
+    });
 }); 

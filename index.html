@@ -212,32 +212,145 @@
         <div class="container">
             <h2 class="typography__title" data-aos="fade-up">Что вы получаете на практике</h2>
 
+            <div class="benefits__tabs" data-aos="fade-up" data-aos-delay="75">
+                <button class="benefits__tab benefits__tab--before is-active" type="button" data-target="before">До</button>
+                <button class="benefits__tab benefits__tab--after" type="button" data-target="after">После</button>
+            </div>
+
             <div class="grid">
-                <div class="grid__col grid__col--half">
-                    <div class="card" data-aos="fade-right">
-                        <h4 class="card__heading">До</h4>
-                        <ul class="card__list">
-                            <li class="card__list-item">Покупки «на эмоциях»</li>
-                            <li class="card__list-item">Вещи не сочетаются</li>
-                            <li class="card__list-item">Сложно быстро собрать образ</li>
-                            <li class="card__list-item">Трата времени в магазинах</li>
-                            <li class="card__list-item">Переплаты и лишние вещи</li>
+                <div class="grid__col grid__col--half benefits__col benefits__col--before is-active">
+                    <div class="card benefits__card benefits__card--before is-active" data-aos="fade-right">
+                        <h4 class="card__heading"><span class="badge badge--before">До</span></h4>
+                        <ul class="card__list card__list--icons">
+                            <li class="card__list-item"><i class="fas fa-xmark card__bullet" aria-hidden="true"></i>Покупки «на эмоциях»</li>
+                            <li class="card__list-item"><i class="fas fa-xmark card__bullet" aria-hidden="true"></i>Вещи не сочетаются</li>
+                            <li class="card__list-item"><i class="fas fa-xmark card__bullet" aria-hidden="true"></i>Сложно быстро собрать образ</li>
+                            <li class="card__list-item"><i class="fas fa-xmark card__bullet" aria-hidden="true"></i>Трата времени в магазинах</li>
+                            <li class="card__list-item"><i class="fas fa-xmark card__bullet" aria-hidden="true"></i>Переплаты и лишние вещи</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="grid__col grid__col--half">
-                    <div class="card" data-aos="fade-left" data-aos-delay="150">
-                        <h4 class="card__heading">После</h4>
-                        <ul class="card__list">
-                            <li class="card__list-item">Капсульный гардероб</li>
-                            <li class="card__list-item">Готовые образы на разные случаи</li>
-                            <li class="card__list-item">Экономия времени и бюджета</li>
-                            <li class="card__list-item">Понимание своей формулы стиля</li>
-                            <li class="card__list-item">Поддержка после консультации</li>
+                <div class="grid__col grid__col--half benefits__col benefits__col--after">
+                    <div class="card benefits__card benefits__card--after" data-aos="fade-left" data-aos-delay="150">
+                        <h4 class="card__heading"><span class="badge badge--after">После</span></h4>
+                        <ul class="card__list card__list--icons">
+                            <li class="card__list-item"><i class="fas fa-check card__bullet" aria-hidden="true"></i>Капсульный гардероб</li>
+                            <li class="card__list-item"><i class="fas fa-check card__bullet" aria-hidden="true"></i>Готовые образы на разные случаи</li>
+                            <li class="card__list-item"><i class="fas fa-check card__bullet" aria-hidden="true"></i>Экономия времени и бюджета</li>
+                            <li class="card__list-item"><i class="fas fa-check card__bullet" aria-hidden="true"></i>Понимание своей формулы стиля</li>
+                            <li class="card__list-item"><i class="fas fa-check card__bullet" aria-hidden="true"></i>Поддержка после консультации</li>
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="benefits__cta" data-aos="zoom-in" data-aos-delay="200">
+                <a href="#contact" class="hero__button">Хочу такой же результат <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section section--dark">
+        <div class="container">
+            <div class="section__content" data-aos="fade-up">
+                <h2 class="section__title">
+                    <span class="section__title-main">
+                        <i class="fas fa-list-check section__icon"></i>
+                        Услуги
+                    </span>
+                </h2>
+                <p class="section__subtitle">Подберу решения под ваши задачи: быстро, рационально, без лишних трат</p>
+            </div>
+
+            <div class="grid">                
+                <div class="grid__col grid__col--third">
+                    <div class="card service-card" data-aos="fade-up">
+                        <h5 class="card__heading">Бесплатная консультация</h5>
+                        <div class="service-card__meta">
+                            <span class="badge badge--neutral" aria-label="Длительность">15–20 минут</span>
+                            <span class="badge badge--after" aria-label="Формат">Онлайн</span>
+                        </div>
+                        <p class="card__text">Мы обсудим ваши предпочтения в стиле, наметим цели, определим бюджет на шопинг, сегмент магазинов и назначим день следующей встречи (шопинг/разбор гардероба).</p>
+                        <div class="service-card__price">Бесплатно</div>
+                        <div class="service-card__actions">
+                            <a href="#contact" class="hero__button service-card__cta" data-service="Бесплатная консультация">
+                                Записаться
+                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid__col grid__col--third">
+                    <div class="card service-card" data-aos="fade-up">                        
+                        <h5 class="card__heading">Разбор гардероба</h5>
+                        <div class="service-card__meta">
+                            <span class="badge badge--neutral" aria-label="Длительность">2–3 часа</span>
+                            <span class="badge badge--after" aria-label="Формат">Дома / Онлайн</span>
+                        </div>
+                        <ul class="card__list card__list--icons">
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Критически оценим вещи: что оставить, что убрать</li>
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Соберём капсулу на сезон</li>
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Список точечных докупок под ваш бюджет</li>
+                        </ul>
+                        <div class="service-card__price">от 5 000 ₽</div>
+                        <div class="service-card__actions">
+                            <a href="#contact" class="hero__button service-card__cta" data-service="Разбор гардероба">
+                                Записаться
+                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid__col grid__col--third">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="150">                    
+                        <h5 class="card__heading">Шоппинг‑сопровождение</h5>
+                        <div class="service-card__meta">
+                            <span class="badge badge--neutral" aria-label="Длительность">2–3 часа</span>
+                            <span class="badge badge--after" aria-label="Формат">Оффлайн</span>
+                        </div>
+                        <ul class="card__list card__list--icons">
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Подберём 12–15 вещей</li>                    
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Соберём 45+ готовых образов</li>
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Сэкономим время и деньги благодаря моим персональным скидкам</li>
+                        </ul>
+                        <div class="service-card__price">от 15 000 ₽</div>
+                        <div class="service-card__actions">
+                            <a href="#contact" class="hero__button service-card__cta" data-service="Шоппинг-сопровождение">
+                                Забронировать слот
+                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid__col grid__col--third">
+                    <div class="card service-card" data-aos="fade-up" data-aos-delay="300">                        
+                        <h5 class="card__heading">Онлайн‑консультация</h5>
+                        <div class="service-card__meta">
+                            <span class="badge badge--neutral" aria-label="Длительность">60–90 минут</span>
+                            <span class="badge badge--after" aria-label="Формат">Онлайн</span>
+                        </div>
+                        <ul class="card__list card__list--icons">
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Личная формула стиля и примеры образов</li>
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Шопинг‑лист под ваш бюджет</li>
+                            <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Поддержка сообщением после созвона</li>
+                        </ul>
+                        <div class="service-card__price">от 6 000 ₽</div>
+                        <div class="service-card__actions">
+                            <a href="#contact" class="hero__button service-card__cta" data-service="Онлайн‑консультация">
+                                Получить консультацию
+                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__note" data-aos="fade-up" data-aos-delay="150">
+                <p class="services__microcopy">Не уверены, что выбрать? Напишите — предложу формат под вашу ситуацию.</p>
             </div>
         </div>
     </section>
