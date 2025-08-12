@@ -19,6 +19,9 @@
     <!-- AOS (Animate On Scroll) CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -45,6 +48,9 @@
                     <li class="header__nav-item">
                         <a href="#portfolio" class="header__nav-link">Портфолио</a>
                     </li>
+                     <li class="header__nav-item">
+                         <a href="#reviews" class="header__nav-link">Отзывы</a>
+                     </li>
                     <li class="header__nav-item">
                         <a href="#contact" class="header__nav-link">Контакты</a>
                     </li>
@@ -94,6 +100,9 @@
                     <a href="#portfolio" class="mobile-menu__link">Портфолио</a>
                 </li>
                 <li class="mobile-menu__item">
+                    <a href="#reviews" class="mobile-menu__link">Отзывы</a>
+                </li>
+                <li class="mobile-menu__item">
                     <a href="#contact" class="mobile-menu__link">Контакты</a>
                 </li>
             </ul>
@@ -120,13 +129,12 @@
             <div class="hero__grid">
                 <div class="hero__content" data-aos="fade-right">
                     <h1 class="hero__title">
-                        <div class="hero__title-main">
-                            <i class="fas fa-crown hero__icon"></i>
-                            Ильдар — ваш персональный мужской стилист
+                        <div class="hero__title-main">                         
+                            Ильдар — Ваш персональный мужской стилист
                         </div>
                     </h1>
                     <p class="hero__subtitle">
-                        Создам гармоничный гардероб и сэкономлю ваше время и бюджет
+                        Создам гармоничный гардероб и сэкономлю Ваше время и бюджет
                     </p>
                     <div class="hero__cta">
                         <a href="#contact" class="hero__button">
@@ -274,12 +282,6 @@
                         </div>
                         <p class="card__text">Мы обсудим ваши предпочтения в стиле, наметим цели, определим бюджет на шопинг, сегмент магазинов и назначим день следующей встречи (шопинг/разбор гардероба).</p>
                         <div class="service-card__price">Бесплатно</div>
-                        <div class="service-card__actions">
-                            <a href="#contact" class="hero__button service-card__cta" data-service="Бесплатная консультация">
-                                Записаться
-                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div class="grid__col grid__col--third">
@@ -295,12 +297,6 @@
                             <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Список точечных докупок под ваш бюджет</li>
                         </ul>
                         <div class="service-card__price">от 5 000 ₽</div>
-                        <div class="service-card__actions">
-                            <a href="#contact" class="hero__button service-card__cta" data-service="Разбор гардероба">
-                                Записаться
-                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
@@ -317,12 +313,6 @@
                             <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Сэкономим время и деньги благодаря моим персональным скидкам</li>
                         </ul>
                         <div class="service-card__price">от 15 000 ₽</div>
-                        <div class="service-card__actions">
-                            <a href="#contact" class="hero__button service-card__cta" data-service="Шоппинг-сопровождение">
-                                Забронировать слот
-                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
                 
@@ -339,12 +329,6 @@
                             <li class="card__list-item"><i class="fas fa-circle card__bullet" aria-hidden="true"></i>Поддержка сообщением после созвона</li>
                         </ul>
                         <div class="service-card__price">от 6 000 ₽</div>
-                        <div class="service-card__actions">
-                            <a href="#contact" class="hero__button service-card__cta" data-service="Онлайн‑консультация">
-                                Получить консультацию
-                                <i class="fas fa-arrow-right hero__button-icon" aria-hidden="true"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -354,8 +338,57 @@
             </div>
         </div>
     </section>
+    
+    <!-- Reviews Section -->
+    <section id="reviews" class="section">
+        <div class="container">
+            <div class="section__content" data-aos="fade-up">
+                <h2 class="section__title">
+                    <span class="section__title-main">
+                        <i class="fas fa-comments section__icon"></i>
+                        Результаты клиентов
+                    </span>
+                </h2>            
+            </div>
 
+            <div class="reviews">
+                <div class="swiper reviews__slider" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review1.webp" alt="Отзыв клиента 1" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review2.webp" alt="Отзыв клиента 2" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review3.webp" alt="Отзыв клиента 3" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review4.webp" alt="Отзыв клиента 4" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review5.webp" alt="Отзыв клиента 5" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide">
+                            <img src="assets/images/review6.webp" alt="Отзыв клиента 6" class="review-slide__image">
+                        </div>
+                        <div class="swiper-slide review-slide review-slide--avito">
+                            <img src="assets/images/review-more.webp" alt="Все отзывы на Авито — скриншот" class="review-slide__image">
+                            <a class="review-slide__badge" href="https://www.avito.ru/moskva/predlozheniya_uslug/muzhskoy_stilist_po_podboru_odezhdy.razbor_garderoba_4497104070" target="_blank" rel="noopener noreferrer">
+                                <span class="review-slide__badge-text">Все отзывы на Авито</span>
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    
+    
     <!-- Main Content -->
     <section class="section">
         <div class="container">
@@ -475,6 +508,9 @@
     
     <!-- AOS (Animate On Scroll) JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     
     <!-- Custom JS -->
     <script src="index.js"></script>

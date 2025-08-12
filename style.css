@@ -1062,6 +1062,128 @@ body.menu-open {
   color: var(--text-light);
 }
 
+/* Reviews */
+.reviews {
+  margin-top: 8px;
+}
+
+#reviews .section__title {
+  margin-bottom: 24px;
+}
+
+.reviews__slider {
+  position: relative;
+}
+
+.review-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.review-slide__image {
+  height: 520px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .review-slide__image {
+    height: 384px;
+  }
+}
+
+.review-slide--avito {
+  position: relative;
+}
+
+.review-slide__badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(44, 62, 80, 0.85);
+  color: #fff;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.review-slide__badge:hover {
+  transform: translateY(-2px);
+  background: rgba(44, 62, 80, 0.95);
+}
+
+/* Keep white text on all states */
+.review-slide__badge,
+.review-slide__badge:visited,
+.review-slide__badge:hover,
+.review-slide__badge:focus,
+.review-slide__badge:active {
+  color: #fff;
+}
+
+.review-slide__badge i {
+  color: #fff;
+}
+
+.review-slide__badge-text {
+  font-weight: 600;
+}
+
+.reviews__note {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.reviews__microcopy {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Swiper theming to fit Old Money style */
+.swiper-button-prev, .swiper-button-next { color: var(--color-navy); }
+.reviews__slider .swiper-button-prev,
+.reviews__slider .swiper-button-next {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: var(--shadow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  color: var(--color-navy);
+}
+
+.reviews__slider .swiper-button-prev::after,
+.reviews__slider .swiper-button-next::after {
+  font-size: 16px;
+}
+
+.reviews__slider .swiper-button-prev:hover,
+.reviews__slider .swiper-button-next:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-1px);
+}
+
+.reviews__slider .swiper-button-disabled {
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet { background: rgba(44,62,80,0.25); }
+
+.swiper-pagination-bullet-active { background: var(--accent-primary); }
+
 .benefits__tabs {
   display: none;
   gap: 8px;
@@ -1173,8 +1295,6 @@ body.menu-open {
   font-weight: 700;
   color: var(--text-primary);
   font-size: 18px;
-  margin-top: 8px;
-  margin-bottom: 16px;
   margin-top: auto;
 }
 
@@ -1249,7 +1369,7 @@ body.menu-open {
 }
 
 .section__title {
-  color: var(--text-light);
+  color: var(--text-primary);
   font-weight: 600;
   font-size: 40px;
   line-height: 1.2;
@@ -1284,9 +1404,15 @@ body.menu-open {
 }
 
 .section__subtitle {
-  color: var(--text-light);
+  color: var(--text-secondary);
   font-size: 18px;
   margin-bottom: 16px !important;
+}
+
+/* Keep light text for titles/subtitles inside dark sections */
+.section--dark .section__title,
+.section--dark .section__subtitle {
+  color: var(--text-light);
 }
 
 .section__icon {

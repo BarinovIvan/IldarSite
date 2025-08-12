@@ -271,4 +271,29 @@ $(document).ready(function() {
         $next.one('transitionend', onTransitionEnd);
         $current.one('transitionend', onTransitionEnd);
     });
+
+    // Reviews карусель
+    if (window.Swiper) {
+        const reviewsSwiper = new Swiper('.reviews__slider', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 1 },
+                1024: { slidesPerView: 2 },
+            }
+        });
+    } else {
+        console.warn('Swiper не загружен');
+    }
 }); 
