@@ -15,6 +15,7 @@ $(document).ready(function() {
     const $body = $('body');
     let mobileMenuOpen = false;
     let isAnimating = false;
+    let lockedScrollY = 0;
     
     function openMobileMenu() {
         if (isAnimating) return;
@@ -27,8 +28,16 @@ $(document).ready(function() {
         }
         
         $mobileMenu.removeClass('mobile-menu--closing').addClass('mobile-menu--open');
-        $header.addClass('header--menu-open');
-        $body.addClass('menu-open');
+        $header.addClass('header--menu-open');        
+        lockedScrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        $body.addClass('menu-open')
+             .css({
+                 position: 'fixed',
+                 top: `-${lockedScrollY}px`,
+                 left: '0',
+                 right: '0',
+                 width: '100%'
+             });
         
         // Сбрасываем флаг анимации после завершения
         setTimeout(() => {
@@ -47,8 +56,10 @@ $(document).ready(function() {
         }
         
         $mobileMenu.addClass('mobile-menu--closing');
-        $header.removeClass('header--menu-open').addClass('header--menu-closing');
-        $body.removeClass('menu-open');
+        $header.removeClass('header--menu-open').addClass('header--menu-closing');        
+        $body.removeClass('menu-open')
+             .css({ position: '', top: '', left: '', right: '', width: '' });
+        window.scrollTo(0, lockedScrollY);
         
         
         setTimeout(() => {
