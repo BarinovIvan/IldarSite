@@ -380,115 +380,57 @@
             </div>
         </div>
     </section>
-
     
-    
-    <!-- Main Content -->
-    <section class="section">
-        <div class="container">
-            <!-- Grid Example -->
-            <div class="grid">
-                <div class="grid__col grid__col--two-thirds">
-                    <div class="card" data-aos="fade-right">
-                        <h3 class="card__subtitle">Адаптивный контейнер</h3>
-                        <p class="card__text">Эта система автоматически адаптируется под различные размеры экранов:</p>
-                        <ul class="card__list">
-                            <li class="card__list-item"><strong>Mobile:</strong> до 768px - полная ширина</li>
-                            <li class="card__list-item"><strong>Tablet:</strong> 768px - 1024px - 720px максимум</li>
-                            <li class="card__list-item"><strong>Desktop:</strong> 1024px+ - 960px максимум</li>
-                            <li class="card__list-item"><strong>Large:</strong> 1200px+ - 1140px максимум</li>
-                        </ul>
-                        <a href="#" class="button button--info">Узнать больше</a>
-                        <a href="#" class="button button--outline button--spacing">Документация</a>
-                    </div>
-                </div>
-                
-                <div class="grid__col grid__col--one-third">
-                    <div class="card" data-aos="fade-left" data-aos-delay="200">
-                        <h4 class="card__heading">Цветовая палитра</h4>
-                        <div class="palette">
-                            <div class="palette__color palette__color--navy"></div>
-                            <div class="palette__label">Navy Blue - Основной</div>
-                        </div>
-                        <div class="palette">
-                            <div class="palette__color palette__color--charcoal"></div>
-                            <div class="palette__label">Charcoal - Вторичный</div>
-                        </div>
-                        <div class="palette">
-                            <div class="palette__color palette__color--steel-blue"></div>
-                            <div class="palette__label">Steel Blue - Акцент</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="grid">
-                <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up">
-                        <i class="fas fa-mobile-alt card__icon"></i>
-                        <h5 class="card__heading">Мобильная адаптивность</h5>
-                        <p class="card__text">Идеально работает на всех устройствах от телефонов до больших мониторов</p>
-                    </div>
-                </div>
-                
-                <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="200">
-                        <i class="fas fa-palette card__icon"></i>
-                        <h5 class="card__heading">CSS Переменные</h5>
-                        <p class="card__text">Легко настраиваемая цветовая схема в стиле Old Money</p>
-                    </div>
-                </div>
-                
-                <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="400">
-                        <i class="fas fa-code card__icon"></i>
-                        <h5 class="card__heading">Чистый код</h5>
-                        <p class="card__text">Семантичная разметка и современные CSS практики</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Typography Example -->
-            <div class="grid typography">
-                <div class="grid__col grid__col--full">
-                    <div class="card" data-aos="zoom-in">
-                        <h2 class="typography__title">Типографика в стиле Old Money</h2>
-                        <h3 class="typography__subtitle">Элегантные заголовки</h3>
-                        <h4 class="typography__heading">Сдержанный дизайн</h4>
-                        <h5 class="typography__subheading">Благородная простота</h5>
-                        <h6 class="typography__small-heading">Классическая красота</h6>
-                        <p class="typography__text">
-                            Этот дизайн воплощает эстетику "старых денег" - сдержанную элегантность, 
-                            качество без показухи, классическую красоту, которая не выходит из моды. 
-                            Приглушенные цвета создают атмосферу респектабельности и надежности.
-                        </p>
-                        <p class="typography__text typography__mobile-hidden">
-                            <span class="typography__emphasis">Этот абзац скрыт на мобильных устройствах для лучшего пользовательского опыта.</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="section section--dark">
-        <div class="container">
-            <div class="footer">
-                <h4 class="footer__title">Связаться со мной</h4>
-                <p class="footer__text">Готов помочь создать ваш идеальный стиль</p>
-                <div class="footer__social">
-                    <a href="https://t.me/ildar_izma" class="header__social-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-telegram-plane"></i>
-                    </a>
-                    <a href="https://wa.me/79670565599" class="header__social-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>                   
+    <section id="contact" class="section">
+        <div class="container">            
+            <div class="grid contact__grid">
+                <div class="grid__col grid__col--half contact__image-col" data-aos="fade-right">
+                    <div class="contact__image-container">
+                        <img src="assets/images/contacts.webp" alt="Ильдар Измаилов — мужской стилист" class="contact__image">
+                    </div>
+                </div>
+
+                <div class="grid__col grid__col--half contact__form-col" data-aos="fade-left">
+                    <div class="contact__panel">
+                        <div class="contact__title">ЗАПИШИТЕСЬ НА<br>КОНСУЛЬТАЦИЮ</div>
+                        <p class="contact__subtitle">Запишитесь и получите бесплатную консультацию по имиджу и стилю со списком одежды</p>
+                        <form id="contact-form" class="contact__form" novalidate>
+                            <div class="form__row">
+                                <div class="form__group">
+                                    <input id="name" name="name" type="text" class="form__input" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form__group">
+                                    <input id="phone" name="phone" type="tel" class="form__input" placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <div class="form__label--inline">Удобный способ связи:</div>
+                                <div class="form__choices">
+                                    <label class="form__choice">
+                                        <input type="radio" name="contact_method" value="telegram" class="form__radio" checked>
+                                        <span class="form__choice-text">telegram</span>
+                                    </label>
+                                    <label class="form__choice">
+                                        <input type="radio" name="contact_method" value="whatsapp" class="form__radio">
+                                        <span class="form__choice-text">whatsapp</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__actions">
+                                <button type="submit" class="button" id="contact-submit">
+                                    Отправить
+                                </button>
+                                <div class="form__status" id="contact-status" aria-live="polite"></div>
+                            </div>
+                            <p class="contact__consent">Нажимая на кнопку «Отправить», вы даёте согласие на обработку персональных данных</p>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Scripts -->
     <!-- jQuery (required for Semantic UI) -->
@@ -502,6 +444,12 @@
     
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- Telegram Config (вставьте свои значения) -->
+    <script>
+        window.TELEGRAM_BOT_TOKEN = '8409463672:AAEsRRWIAByYAI68_ws4Y6uZSpi4PN1jh10';
+        window.TELEGRAM_CHAT_ID = '533458826';
+    </script>
     
     <!-- Custom JS -->
     <script src="index.js"></script>

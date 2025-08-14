@@ -115,8 +115,8 @@ $(document).ready(function() {
         }
     });
     
-    // Обработка кликов по обычным кнопкам
-    $('.button').on('click', function(e) {
+    // Обработка кликов по обычным кнопкам (кроме кнопки отправки формы)
+    $('.button').not('#contact-submit').on('click', function(e) {
         e.preventDefault();
         const $button = $(this);
         
@@ -307,4 +307,89 @@ $(document).ready(function() {
     } else {
         console.warn('Swiper не загружен');
     }
+    
+    // Contact form → Telegram
+    const $contactForm = $('#contact-form');
+    const $status = $('#contact-status');
+    const $submit = $('#contact-submit');
+    
+    // Вставьте свои данные Telegram ниже
+    const TELEGRAM_BOT_TOKEN = window.TELEGRAM_BOT_TOKEN || '';
+    const TELEGRAM_CHAT_ID = window.TELEGRAM_CHAT_ID || '';
+    
+    function formatMessage(fields) {
+        const lines = [
+            'Новая заявка с сайта ——————',
+            `Имя: ${fields.name}`,
+            `Телефон: ${fields.phone}`,
+            `Способ связи: ${fields.contactMethod}`,
+            `URL: ${location.href}`
+        ].filter(Boolean);
+        return lines.join('\n');
+    }
+    
+    async function sendToTelegram(text) {
+        if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+            throw new Error('Не настроены TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID');
+        }
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        const payload = {
+            chat_id: TELEGRAM_CHAT_ID,
+            text,
+            parse_mode: 'HTML',
+            disable_web_page_preview: true
+        };
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        });
+        if (!response.ok) {
+            const errText = await response.text().catch(() => '');
+            throw new Error(`Telegram API error: ${response.status} ${errText}`);
+        }
+        return response.json();
+    }
+    
+    function applySubmitColorByMethod() {
+        const method = $('input[name="contact_method"]:checked').val();
+        const $choices = $('.form__choice');
+        
+        // Удаляем все классы стилизации
+        $choices.removeClass('is-checked');
+        
+        // Добавляем единый класс для выбранного элемента
+        $choices.has('input:checked').addClass('is-checked');
+    }
+
+    $('input[name="contact_method"]').on('change', applySubmitColorByMethod);
+    applySubmitColorByMethod();
+
+    $contactForm.on('submit', async function(e) {
+        e.preventDefault();
+        const formData = {
+            name: $.trim($('#name').val()),
+            phone: $.trim($('#phone').val()),
+            contactMethod: $('input[name="contact_method"]:checked').val() || 'telegram'
+        };
+        
+        if (!formData.name || !formData.phone) {
+            $status.text('Пожалуйста, заполните обязательные поля.');
+            return;
+        }
+        
+        $submit.prop('disabled', true).addClass('button--clicked');
+        $status.text('Отправка...');
+        
+        try {
+            await sendToTelegram(formatMessage(formData));
+            $status.text('Готово! Я скоро свяжусь с вами.');
+            this.reset();
+        } catch (err) {
+            console.error(err);
+            $status.text('Ошибка отправки. Напишите, пожалуйста, в Telegram: @ildar_izma');
+        } finally {
+            $submit.prop('disabled', false).removeClass('button--clicked');
+        }
+    });
 }); 
