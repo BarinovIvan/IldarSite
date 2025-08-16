@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ильдар - Мужской стилист</title>
+    <title>Ильдар Измаилов - Мужской стилист в Москве | Персональный шопинг и консультации по стилю</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="description" content="Персональный мужской стилист Ильдар Измаилов. Создам гармоничный гардероб, сэкономлю время и бюджет. Разбор гардероба, шопинг-сопровождение, онлайн-консультации в Москве.">
+    <meta name="keywords" content="мужской стилист, персональный стилист, стилист москва, разбор гардероба, шопинг сопровождение, мужская мода, имидж консультант">
+    <meta name="author" content="Ильдар Измаилов">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ваш-домен.ru/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ваш-домен.ru/">
+    <meta property="og:title" content="Ильдар Измаилов - Мужской стилист в Москве">
+    <meta property="og:description" content="Персональный мужской стилист. Создам гармоничный гардероб, сэкономлю время и бюджет. Разбор гардероба, шопинг-сопровождение, онлайн-консультации.">
+    <meta property="og:image" content="https://ваш-домен.ru/assets/images/banner-image.webp">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ваш-домен.ru/">
+    <meta property="twitter:title" content="Ильдар Измаилов - Мужской стилист в Москве">
+    <meta property="twitter:description" content="Персональный мужской стилист. Создам гармоничный гардероб, сэкономлю время и бюджет.">
+    <meta property="twitter:image" content="https://ваш-домен.ru/assets/images/banner-image.webp">
+    
+    <!-- Preload критических ресурсов -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="assets/images/banner-image.webp" as="image">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +66,7 @@
                 <div class="header__logo-subtitle">МУЖСКОЙ СТИЛИСТ</div>
             </a>
             
-            <nav class="header__nav">
+            <nav class="header__nav" aria-label="Основная навигация">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
                         <a href="#hero" class="header__nav-link">Обо мне</a>
@@ -81,7 +113,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu">
+    <nav class="mobile-menu" aria-label="Мобильное меню навигации">
         <div class="mobile-menu__content">
             <ul class="mobile-menu__list">
                 <li class="mobile-menu__item">
@@ -115,7 +147,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -127,9 +159,9 @@
                             Ильдар — Ваш персональный мужской стилист
                         </div>
                     </h1>
-                    <p class="hero__subtitle">
+                    <h2 class="hero__subtitle">
                         Создам гармоничный гардероб и сэкономлю Ваше время и бюджет
-                    </p>
+                    </h2>
                     <div class="hero__cta">
                         <a href="#contact" class="hero__button">
                             Получить бесплатную консультацию
@@ -138,7 +170,7 @@
                     </div>
                 </div>
                 <div class="hero__image-container" data-aos="fade-left" data-aos-delay="200">
-                    <img src="assets/images/banner-image.webp" alt="Ильдар Измаилов - мужской стилист" class="hero__image">
+                    <img src="assets/images/banner-image.webp" alt="Мужской стилист Ильдар Измаилов в классическом костюме - персональные консультации по стилю в Москве" class="hero__image">
                 </div>
             </div>
         </div>
@@ -158,51 +190,51 @@
 
             <div class="grid">
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up">
+                    <article class="card card--centered" data-aos="fade-up">
                         <i class="fas fa-clock card__icon"></i>
-                        <h5 class="card__heading">Нет времени на шоппинг</h5>
+                        <h3 class="card__heading">Нет времени на шоппинг</h3>
                         <p class="card__text">Сложно выделить множество часов на магазины.</p>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="150">
+                    <article class="card card--centered" data-aos="fade-up" data-aos-delay="150">
                         <i class="fas fa-question-circle card__icon"></i>
-                        <h5 class="card__heading">Неуверенность в стиле</h5>
+                        <h3 class="card__heading">Неуверенность в стиле</h3>
                         <p class="card__text">Трудно подобрать уместные вещи по фигуре, статусу и задачам.</p>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="300">
+                    <article class="card card--centered" data-aos="fade-up" data-aos-delay="300">
                         <i class="fas fa-money-bill-wave card__icon"></i>
-                        <h5 class="card__heading">Переплаты и лишние вещи</h5>
+                        <h3 class="card__heading">Переплаты и лишние вещи</h3>
                         <p class="card__text">Импульсные покупки без системы и практической пользы.</p>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="450">
+                    <article class="card card--centered" data-aos="fade-up" data-aos-delay="450">
                         <i class="fas fa-puzzle-piece card__icon"></i>
-                        <h5 class="card__heading">Вещи не сочетаются</h5>
+                        <h3 class="card__heading">Вещи не сочетаются</h3>
                         <p class="card__text">Шкаф полный, а надеть нечего — нет собранной капсулы.</p>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="600">
+                    <article class="card card--centered" data-aos="fade-up" data-aos-delay="600">
                         <i class="fas fa-briefcase card__icon"></i>
-                        <h5 class="card__heading">Нужно выглядеть солидно</h5>
+                        <h3 class="card__heading">Нужно выглядеть солидно</h3>
                         <p class="card__text">Новые задачи требуют обновить образ без перегибов и вычурности.</p>
-                    </div>
+                    </article>
                 </div>
 
                 <div class="grid__col grid__col--third">
-                    <div class="card card--centered" data-aos="fade-up" data-aos-delay="750">
+                    <article class="card card--centered" data-aos="fade-up" data-aos-delay="750">
                         <i class="fas fa-recycle card__icon"></i>
-                        <h5 class="card__heading">Обновить гардероб рационально</h5>
+                        <h3 class="card__heading">Обновить гардероб рационально</h3>
                         <p class="card__text">Меньше вещей — больше образов, разумные траты и экономия.</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
@@ -217,8 +249,8 @@
                     <!-- Изображения для мобильных (показывается первыми) -->
                     <div class="benefits__images-mobile" data-aos="fade-up" data-aos-delay="150">
                         <div class="benefits__image-composition">
-                            <img src="assets/images/benefits.webp" alt="Результаты работы стилиста Ильдара" class="benefits__image benefits__image--main">
-                            <img src="assets/images/benefits2.webp" alt="Работа стилиста с клиентом" class="benefits__image benefits__image--overlay">
+                            <img src="assets/images/benefits.webp" alt="Пример стильного мужского образа после работы с персональным стилистом" class="benefits__image benefits__image--main">
+                            <img src="assets/images/benefits2.webp" alt="Процесс работы мужского стилиста - подбор одежды и создание образа" class="benefits__image benefits__image--overlay">
                         </div>
                     </div>
                     
@@ -302,8 +334,8 @@
                 <!-- Правая колонка на desktop, скрыта на mobile -->
                 <div class="benefits__images-desktop" data-aos="fade-left" data-aos-delay="250">
                     <div class="benefits__image-composition">
-                        <img src="assets/images/benefits.webp" alt="Результаты работы стилиста Ильдара" class="benefits__image benefits__image--main">
-                        <img src="assets/images/benefits2.webp" alt="Работа стилиста с клиентом" class="benefits__image benefits__image--overlay">
+                        <img src="assets/images/benefits.webp" alt="Результат работы мужского стилиста - элегантный деловой образ" class="benefits__image benefits__image--main">
+                        <img src="assets/images/benefits2.webp" alt="Консультация мужского стилиста - профессиональный подход к созданию стиля" class="benefits__image benefits__image--overlay">
                     </div>
                 </div>
             </div>
@@ -323,28 +355,28 @@
             </div>
 
             <div class="services-list">
-                <div class="service-item" data-aos="fade-up">
-                    <div class="service-item__header">
+                <article class="service-item" data-aos="fade-up">
+                    <header class="service-item__header">
                         <h3 class="service-item__title">Бесплатная консультация</h3>
                         <div class="service-item__meta">
                             <span class="service-badge" aria-label="Длительность">15–20 минут</span>
                             <span class="service-badge" aria-label="Формат">Онлайн</span>
                         </div>
-                    </div>
+                    </header>
                     <p class="service-item__description">
                         Мы обсудим ваши предпочтения в стиле, наметим цели, определим бюджет на шопинг, сегмент магазинов и назначим день следующей встречи (шопинг/разбор гардероба).
                     </p>
                     <div class="service-item__price">Бесплатно</div>
-                </div>
+                </article>
                 
-                <div class="service-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-item__header">
+                <article class="service-item" data-aos="fade-up" data-aos-delay="100">
+                    <header class="service-item__header">
                         <h3 class="service-item__title">Разбор гардероба</h3>
                         <div class="service-item__meta">
                             <span class="service-badge" aria-label="Длительность">2–3 часа</span>
                             <span class="service-badge" aria-label="Формат">Дома / Онлайн</span>
                         </div>
-                    </div>
+                    </header>
                     <ul class="service-item__features">
                         <li class="service-item__feature">
                             <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
@@ -360,16 +392,16 @@
                         </li>
                     </ul>
                     <div class="service-item__price">от 5 000 ₽</div>
-                </div>
+                </article>
                 
-                <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-item__header">
+                <article class="service-item" data-aos="fade-up" data-aos-delay="200">
+                    <header class="service-item__header">
                         <h3 class="service-item__title">Шоппинг‑сопровождение</h3>
                         <div class="service-item__meta">
                             <span class="service-badge" aria-label="Длительность">2–3 часа</span>
                             <span class="service-badge" aria-label="Формат">Оффлайн</span>
                         </div>
-                    </div>
+                    </header>
                     <ul class="service-item__features">
                         <li class="service-item__feature">
                             <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
@@ -385,16 +417,16 @@
                         </li>
                     </ul>
                     <div class="service-item__price">от 15 000 ₽</div>
-                </div>
+                </article>
                 
-                <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-item__header">
+                <article class="service-item" data-aos="fade-up" data-aos-delay="300">
+                    <header class="service-item__header">
                         <h3 class="service-item__title">Онлайн‑консультация</h3>
                         <div class="service-item__meta">
                             <span class="service-badge" aria-label="Длительность">60–90 минут</span>
                             <span class="service-badge" aria-label="Формат">Онлайн</span>
                         </div>
-                    </div>
+                    </header>
                     <ul class="service-item__features">
                         <li class="service-item__feature">
                             <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
@@ -410,12 +442,12 @@
                         </li>
                     </ul>
                     <div class="service-item__price">от 6 000 ₽</div>
-                </div>
+                </article>
             </div>
 
-            <div class="services__note" data-aos="fade-up" data-aos-delay="150">
+            <aside class="services__note" data-aos="fade-up" data-aos-delay="150">
                 <p class="services__microcopy">Не уверены, что выбрать? Напишите — предложу формат под вашу ситуацию.</p>
-            </div>
+            </aside>
         </div>
     </section>
     
@@ -466,13 +498,13 @@
             <div class="grid contact__grid">
                 <div class="grid__col grid__col--half contact__image-col" data-aos="fade-right">
                     <div class="contact__image-container">
-                        <img src="assets/images/contacts.webp" alt="Ильдар Измаилов — мужской стилист" class="contact__image">
+                        <img src="assets/images/contacts.webp" alt="Персональный мужской стилист Ильдар Измаилов - запись на консультацию по стилю в Москве" class="contact__image">
                     </div>
                 </div>
 
                 <div class="grid__col grid__col--half contact__form-col" data-aos="fade-left">
                     <div class="contact__panel">
-                        <div class="contact__title">ЗАПИШИТЕСЬ НА<br>КОНСУЛЬТАЦИЮ</div>
+                        <h2 class="contact__title">ЗАПИШИТЕСЬ НА<br>КОНСУЛЬТАЦИЮ</h2>
                         <p class="contact__subtitle">Запишитесь и получите бесплатную консультацию по имиджу и стилю со списком одежды</p>
                         <form id="contact-form" class="contact__form" novalidate>
                             <div class="form__row">
@@ -514,41 +546,36 @@
     <footer class="footer section section--dark">
         <div class="container">
             <div class="footer__content">
-                <div class="footer__grid">
-                    <!-- Logo Section -->
-                    <div class="footer__logo-section">
+                <div class="footer__grid">                    
+                    <aside class="footer__logo-section">
                         <div class="footer__logo">
                             <div class="footer__logo-main">Ильдар Измаилов</div>
                             <div class="footer__logo-subtitle">МУЖСКОЙ СТИЛИСТ</div>
                         </div>
-                    </div>
-                    
-                    <!-- Navigation Section -->
-                    <div class="footer__nav-section">
+                    </aside>
+                                    
+                    <nav class="footer__nav-section" aria-label="Навигация по сайту">
                         <h4 class="footer__section-title">Навигация</h4>
-                        <nav class="footer__nav">
-                            <ul class="footer__nav-list">
-                                <li class="footer__nav-item">
-                                    <a href="#hero" class="footer__nav-link">Обо мне</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a href="#problems" class="footer__nav-link">Проблемы клиентов</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a href="#services" class="footer__nav-link">Услуги</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a href="#reviews" class="footer__nav-link">Отзывы</a>
-                                </li>
-                                <li class="footer__nav-item">
-                                    <a href="#contact" class="footer__nav-link">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
-                    <!-- Contact Section -->
-                    <div class="footer__contact-section">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="#hero" class="footer__nav-link">Обо мне</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#problems" class="footer__nav-link">Проблемы клиентов</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#services" class="footer__nav-link">Услуги</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#reviews" class="footer__nav-link">Отзывы</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="#contact" class="footer__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                                    
+                    <aside class="footer__contact-section">
                         <h4 class="footer__section-title">Связаться со мной</h4>
                         <div class="footer__social">
                             <a href="https://t.me/ildar_izma" class="footer__social-link" target="_blank" rel="noopener noreferrer">
@@ -560,10 +587,9 @@
                                 <span>WhatsApp</span>
                             </a>
                         </div>
-                    </div>
+                    </aside>
                 </div>
-                
-                <!-- Footer Bottom -->
+                                
                 <div class="footer__bottom">
                     <div class="footer__divider"></div>
                     <div class="footer__copyright">
@@ -588,11 +614,55 @@
     <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
     
     <!-- Telegram Config (вставьте свои значения) -->
-    <script>
-        window.TELEGRAM_BOT_TOKEN = '8409463672:AAEsRRWIAByYAI68_ws4Y6uZSpi4PN1jh10';
-        window.TELEGRAM_CHAT_ID = '533458826';
-    </script>
     
+    <!-- Структурированные данные Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ильдар Измаилов",
+        "jobTitle": "Персональный мужской стилист",
+        "description": "Профессиональный мужской стилист в Москве. Оказываю услуги персонального шопинга, разбора гардероба и консультаций по стилю.",
+        "url": "https://ваш-домен.ru",
+        "telephone": "+7 (967) 056-55-99",
+        "address": {
+            "@type": "Place",
+            "addressLocality": "Москва",
+            "addressCountry": "RU"
+        },
+        "sameAs": [
+            "https://t.me/ildar_izma",
+            "https://wa.me/79670565599"
+        ],
+        "offers": [
+            {
+                "@type": "Service",
+                "name": "Бесплатная консультация",
+                "description": "Обсуждение предпочтений в стиле, определение целей и бюджета",
+                "priceRange": "Бесплатно"
+            },
+            {
+                "@type": "Service", 
+                "name": "Разбор гардероба",
+                "description": "Критическая оценка вещей, создание капсульного гардероба",
+                "priceRange": "от 5000 RUB"
+            },
+            {
+                "@type": "Service",
+                "name": "Шоппинг-сопровождение", 
+                "description": "Подбор 12-15 вещей и создание 45+ готовых образов",
+                "priceRange": "от 15000 RUB"
+            },
+            {
+                "@type": "Service",
+                "name": "Онлайн-консультация",
+                "description": "Личная формула стиля и шопинг-лист под ваш бюджет",
+                "priceRange": "от 6000 RUB"
+            }
+        ]
+    }
+    </script>
+
     <!-- Custom JS -->
     <script src="index.js"></script>
 </body>

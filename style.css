@@ -1,4 +1,3 @@
-/* CSS Variables - Old Money Color Palette */
 :root {
   /* Typography */
   --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -58,7 +57,7 @@ body.menu-open {
   overflow: hidden;
 }
 
-/* Дополнительный backdrop эффект для меню */
+
 .mobile-menu::before {
   content: '';
   position: absolute;
@@ -127,7 +126,7 @@ body.menu-open {
   transition-delay: 0s;
 }
 
-/* Header */
+/* header ----------- */
 .header {
   position: fixed;
   top: 0;
@@ -140,10 +139,10 @@ body.menu-open {
   box-shadow: none;
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  contain: paint; /* изоляция блюра/теней, чтобы не раздувать scrollWidth */
+  contain: paint;
 }
 
-/* Плавающий дизайн только для больших экранов */
+
 @media (min-width: 768px) {
   .header {
     top: 16px;
@@ -294,7 +293,7 @@ body.menu-open {
   opacity: 0.6;
 }
 
-/* Адаптивные стили для логотипа на маленьких экранах */
+
 @media (max-width: 480px) {
   .header__logo-main {
     font-size: 20px;
@@ -459,7 +458,7 @@ body.menu-open {
   transform: scale(1.1);
 }
 
-/* Hamburger Icon Animation */
+
 .hamburger {
   width: 24px;
   height: 18px;
@@ -497,7 +496,7 @@ body.menu-open {
   transform-origin: left center;
 }
 
-/* Hamburger to X animation */
+
 .header--menu-open .hamburger__line:nth-child(1) {
   transform: rotate(45deg);
   top: -1px;
@@ -515,7 +514,7 @@ body.menu-open {
   left: 6px;
 }
 
-/* Синхронная анимация закрытия - X обратно к гамбургеру */
+
 .header--menu-closing .hamburger__line:nth-child(1) {
   transform: rotate(0deg);
   top: 0px;
@@ -537,7 +536,7 @@ body.menu-open {
 }
 
 .header--menu-closing {
-  /* Синхронизируем длительность возврата хедера с анимацией закрытия меню */
+
   transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
@@ -547,7 +546,7 @@ body.menu-open {
   }
 }
 
-/* Оптимизация для устройств с низкой производительностью */
+
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu,
   .mobile-menu__content,
@@ -565,14 +564,14 @@ body.menu-open {
   }
 }
 
-/* Улучшения для высокой плотности экрана */
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .hamburger__line {
     height: 1.5px;
   }
 }
 
-/* Оптимизация для экранов с высокой частотой обновления */
+
 @media (prefers-reduced-motion: no-preference) {
   .mobile-menu,
   .mobile-menu__content,
@@ -584,8 +583,9 @@ body.menu-open {
   }
 }
 
-/* Mobile Menu - iOS Style Animation */
-.mobile-menu {
+/* mobile menu ----------- */
+.mobile-menu,
+nav.mobile-menu {
   position: fixed;
   top: 80px;
   left: 0;
@@ -795,7 +795,7 @@ body.menu-open {
   transition-delay: 0.7s;
 }
 
-/* Container */
+
 .container {
   width: 100%;
   max-width: 1140px;
@@ -859,7 +859,7 @@ body.menu-open {
   }
 }
 
-/* Hero Section */
+/* hero ----------- */
 .hero {
   padding: 80px 0 60px 0;
   background: var(--bg-primary);
@@ -1095,6 +1095,7 @@ body.menu-open {
   }
 }
 
+/* sections ----------- */
 .section {
   padding: 48px 0;
   margin: 24px 0 0;
@@ -1105,7 +1106,7 @@ body.menu-open {
   color: var(--text-light);
 }
 
-/* Reviews */
+/* reviews ----------- */
 .reviews {
   margin-top: 8px;
 }
@@ -1182,7 +1183,7 @@ body.menu-open {
   background: rgba(44, 62, 80, 0.95);
 }
 
-/* Keep white text on all states */
+
 .review-slide__badge,
 .review-slide__badge:visited,
 .review-slide__badge:hover,
@@ -1214,7 +1215,7 @@ body.menu-open {
   margin-bottom: 60px;
 }
 
-/* Contact */
+/* contact ----------- */
 #contact {
   position: relative;
   margin-top: 80px;
@@ -1423,7 +1424,7 @@ body.menu-open {
   border-radius: 50%;
 }
 
-/* Единое оформление для всех радио кнопок */
+
 
 .form__choice:hover .form__radio { 
   border-color: var(--color-navy); 
@@ -1442,13 +1443,13 @@ body.menu-open {
   border-color: var(--color-navy);
 }
 
-/* Единое оформление текста при выборе */
+
 .form__radio:checked ~ .form__choice-text { 
   color: var(--color-navy); 
   font-weight: 500; 
 }
 
-/* Единое оформление выбранного элемента */
+
 .form__choice.is-checked { 
   background: rgba(44, 62, 80, 0.05); 
   border-color: var(--color-navy);
@@ -1460,7 +1461,7 @@ body.menu-open {
   font-size: 14px;
 }
 
-/* Единое оформление кнопки */
+
 .button { 
   min-width: 160px; 
   background: var(--color-navy) !important;
@@ -1469,7 +1470,7 @@ body.menu-open {
   background: var(--color-charcoal) !important; 
 }
 
-/* Планшеты */
+
 @media (min-width: 769px) and (max-width: 1023px) {
   #contact {
     margin-top: 70px;
@@ -1542,7 +1543,7 @@ body.menu-open {
   }
 }
 
-/* Согласие на обработку данных */
+
 .contact__consent {
   font-family: var(--font-body);
   font-size: 12px;
@@ -1566,7 +1567,7 @@ body.menu-open {
     min-height: auto;
   }
   
-  /* Меняем порядок: форма сверху, картинка снизу */
+
   .contact__form-col {
     order: 1;
   }
@@ -1613,7 +1614,7 @@ body.menu-open {
   }
 }
 
-/* Swiper theming to fit Old Money style */
+
 .swiper-button-prev, .swiper-button-next { color: var(--color-navy); }
 .reviews__slider .swiper-button-prev,
 .reviews__slider .swiper-button-next {
@@ -1648,7 +1649,7 @@ body.menu-open {
 
 .swiper-pagination-bullet-active { background: var(--accent-primary); }
 
-/* Benefits Section - Unique Design */
+/* benefits ----------- */
 .benefits {
   padding: 80px 0;
   background: linear-gradient(135deg, 
@@ -1838,7 +1839,7 @@ body.menu-open {
   z-index: 1;
 }
 
-/* Benefits Layout with Image */
+
 .benefits__layout {
   display: flex;
   align-items: stretch;
@@ -1856,7 +1857,7 @@ body.menu-open {
   justify-content: center;
 }
 
-/* Benefits Image Containers */
+
 .benefits__images-desktop {
   flex: 1;
   position: relative;
@@ -1869,13 +1870,13 @@ body.menu-open {
   text-align: center;
 }
 
-/* Desktop заголовок выравнивание */
+
 .benefits__content .section__content {
   text-align: left;
   margin-bottom: 40px;
 }
 
-/* Benefits Image Composition */
+
 .benefits__image-composition {
   position: relative;
   width: 100%;
@@ -1933,7 +1934,7 @@ body.menu-open {
     0 8px 20px rgba(44, 62, 80, 0.2);
 }
 
-/* Enhanced composition for larger screens */
+
 @media (min-width: 1200px) {
   .benefits__layout {
     min-height: 700px;
@@ -1968,13 +1969,13 @@ body.menu-open {
   }
 }
 
-/* Benefits Responsive Design */
+
 @media (max-width: 1023px) {
   .benefits {
     padding: 60px 0;
   }
   
-  /* Switch to mobile layout */
+
   .benefits__layout {
     flex-direction: column;
     gap: 0;
@@ -1997,7 +1998,7 @@ body.menu-open {
     margin: 0 auto 40px auto;
   }
   
-  /* Mobile изображения обычной высоты */
+
   .benefits__images-mobile .benefits__image-composition {
     height: auto;
     min-height: auto;
@@ -2008,7 +2009,7 @@ body.menu-open {
     object-fit: initial;
   }
   
-  /* Вернуть заголовку центрированное выравнивание на мобильных */
+
   .benefits__content .section__content {
     text-align: center;
     margin-bottom: 40px;
@@ -2055,7 +2056,7 @@ body.menu-open {
     margin-bottom: 32px;
   }
   
-  /* Simplify overlay for mobile */
+
   .benefits__image--overlay {
     width: 50%;
     top: 66%;
@@ -2094,7 +2095,7 @@ body.menu-open {
   }
 }
 
-/* Hide arrow on desktop screens */
+
 @media (min-width: 1025px) {
   .benefits__arrow {
     display: none;
@@ -2106,7 +2107,7 @@ body.menu-open {
   }
 }
 
-/* Дополнительные стили для планшетов */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .benefits__layout {
     gap: 40px;
@@ -2123,7 +2124,7 @@ body.menu-open {
     margin-bottom: 28px;
   }
   
-  /* Further simplify overlay for small screens */
+
   .benefits__image--overlay {
     width: 45%;
     top: 66%;
@@ -2148,7 +2149,7 @@ body.menu-open {
   }
 }
 
-/* Badge До/После */
+
 .badge {
   display: inline-block;
   padding: 6px 10px;
@@ -2170,27 +2171,31 @@ body.menu-open {
   border: 1px solid rgba(74, 111, 165, 0.25);
 }
 
-/* Services - Elegant List Design */
+/* services ----------- */
 .services-list {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.service-item {
+.service-item,
+article.service-item {
   padding: 48px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
-.service-item:last-child {
+.service-item:last-child,
+article.service-item:last-child {
   border-bottom: none;
 }
 
-.service-item:hover {
+.service-item:hover,
+article.service-item:hover {
   transform: translateY(-2px);
 }
 
-.service-item__header {
+.service-item__header,
+header.service-item__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -2294,7 +2299,16 @@ body.menu-open {
   line-height: 1.6;
 }
 
-/* Services Responsive Design */
+.services__help-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+
 @media (max-width: 1439px) {
   .service-item__title {
     font-size: 28px;
@@ -2406,7 +2420,7 @@ body.menu-open {
   }
 }
 
-/* Иконки для пунктов */
+
 .card__list--icons .card__list-item {
   display: flex;
   align-items: flex-start;
@@ -2475,7 +2489,7 @@ body.menu-open {
   line-height: 1.6;
 }
 
-/* Keep light text for titles/subtitles inside dark sections */
+
 .section--dark .section__title,
 .section--dark .section__subtitle {
   color: var(--text-light);
@@ -2485,7 +2499,7 @@ body.menu-open {
   margin-right: 8px;
 }
 
-/* Grid */
+/* grid ----------- */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -2514,7 +2528,7 @@ body.menu-open {
   }
 }
 
-/* Оптимизация для планшетов - делаем колонки шире */
+
 @media (min-width: 769px) and (max-width: 1023px) {
   #contact .grid__col--half {
     flex: 0 0 100%;
@@ -2582,8 +2596,9 @@ body.menu-open {
   }
 }
 
-/* Card */
-.card {
+/* card ----------- */
+.card,
+article.card {
   background: var(--bg-primary);
   border-radius: 8px;
   box-shadow: var(--shadow-light);
@@ -2593,7 +2608,8 @@ body.menu-open {
   height: 100%;
 }
 
-.card:hover {
+.card:hover,
+article.card:hover {
   box-shadow: var(--shadow-medium);
 }
 
@@ -2652,7 +2668,7 @@ body.menu-open {
   margin-bottom: 16px;
 }
 
-/* Color Palette */
+
 .palette {
   margin-bottom: 16px;
 }
@@ -2681,7 +2697,7 @@ body.menu-open {
   color: var(--text-secondary);
 }
 
-/* Button */
+/* button ----------- */
 .button {
   font-family: var(--font-body);
   display: inline-block;
@@ -2725,7 +2741,7 @@ body.menu-open {
   box-shadow: var(--shadow-light);
 }
 
-/* Typography */
+/* typography ----------- */
 .typography {
   margin-bottom: 80px;
 }
@@ -2792,7 +2808,7 @@ body.menu-open {
   }
 }
 
-/* Footer */
+/* footer ----------- */
 .footer {
   padding: 80px 0 40px 0;
   margin-top: 0;
@@ -2819,7 +2835,7 @@ body.menu-open {
   }
 }
 
-/* Tablet layout: special grid setup */
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer__grid {
     grid-template-columns: 1fr 1fr;
@@ -2860,7 +2876,7 @@ body.menu-open {
   }
 }
 
-/* Footer Logo */
+
 .footer__logo-section {
   text-align: center;
 }
@@ -2925,7 +2941,7 @@ body.menu-open {
   }
 }
 
-/* Footer Navigation */
+
 .footer__nav-section,
 .footer__contact-section {
   text-align: center;
@@ -2990,7 +3006,7 @@ body.menu-open {
   width: 100%;
 }
 
-/* Footer Social */
+
 .footer__social {
   display: flex;
   flex-direction: column;
@@ -3042,7 +3058,7 @@ body.menu-open {
   font-size: 18px;
 }
 
-/* Footer Bottom */
+
 .footer__bottom {
   margin-top: 48px;
   padding-top: 32px;
@@ -3071,7 +3087,7 @@ body.menu-open {
   font-weight: 400;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 767px) {
   .footer {
     padding: 60px 0 32px 0;
@@ -3114,7 +3130,7 @@ body.menu-open {
   }
 }
 
-/* Footer adaptive width for different screen sizes */
+
 @media (min-width: 768px) {
   .footer__content {
     max-width: 720px;
@@ -3162,7 +3178,7 @@ body.menu-open {
   }
 }
 
-/* Responsive Typography */
+
 @media (max-width: 768px) {
   .section__title {
     font-size: 28px;
@@ -3189,13 +3205,13 @@ body.menu-open {
     font-size: 20px;
   }
   
-  /* Benefits responsive typography */
+
   .benefits__column-title {
     font-size: 18px;
   }
 }
 
-/* Breakpoint Notification */
+
 .breakpoint-notification {
   position: fixed;
   top: 20px;
@@ -3217,7 +3233,7 @@ body.menu-open {
   transform: translateX(0);
 }
 
-/* Legacy Semantic UI overwrites */
+
 .ui.container {
   max-width: 100% !important;
 }

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Приоритетные страницы для индексации
+Sitemap: https://ваш-домен.ru/sitemap.xml
+
+# Запрещаем индексацию служебных файлов
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Запрещаем доступ к конфиденциальным данным
+Disallow: /scripts/telegram_config.js
