@@ -1288,6 +1288,12 @@ nav.mobile-menu {
   display: block;
 }
 
+@media (max-width: 530px) {
+  .contact__image {
+    object-position: 0 -40px;
+  }
+}
+
 .contact__card {
   padding: 0;
   background: transparent;
