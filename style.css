@@ -240,7 +240,7 @@ body.menu-open {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .header__container {
     padding: 0 48px;
   }
@@ -309,7 +309,7 @@ body.menu-open {
   display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .header__nav {
     display: block;
   }
@@ -367,7 +367,7 @@ body.menu-open {
   display: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .header__social {
     display: flex;
     gap: 12px;
@@ -540,7 +540,7 @@ body.menu-open {
   transition: all 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1260px) {
   .header__mobile-menu {
     display: none;
   }
