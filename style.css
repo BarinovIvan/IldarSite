@@ -1151,9 +1151,21 @@ nav.mobile-menu {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .review-slide--avito .review-slide__image {
-    object-position: 40px 0;
+    object-position: 50px 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .review-slide--avito .review-slide__image {
+    object-position: 70px 0;
+  }
+}
+
+@media (max-width: 380px) {
+  .review-slide--avito .review-slide__image {
+    object-position: 90px 0;
   }
 }
 
