@@ -1,10 +1,49 @@
 $(document).ready(function() {
-    // Инициализация AOS
-    AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 100
+    // Инициализация AOS с оптимизацией для мобильных
+    function initAOS() {
+        const isMobile = window.innerWidth <= 768;
+        
+        AOS.init({
+            duration: isMobile ? 500 : 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: isMobile ? 50 : 100,
+            disable: function() {
+                // Отключаем некоторые анимации на слабых мобильных устройствах
+                if (isMobile && window.navigator.hardwareConcurrency < 4) {
+                    return 'phone';
+                }
+                return false;
+            }
+        });
+        
+        if (isMobile) {
+            $('[data-aos-delay]').each(function() {
+                const delay = parseInt($(this).attr('data-aos-delay'));
+                if (delay > 150) {
+                    $(this).attr('data-aos-delay', '0');
+                } else if (delay > 0) {
+                    $(this).attr('data-aos-delay', Math.min(delay, 100));
+                }
+            });
+        }
+    }
+
+    initAOS();
+
+    // Переинициализация AOS при изменении размера окна
+    let resizeTimeout;
+    $(window).on('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            const wasMobile = AOS.init.duration === 400;
+            const isMobile = window.innerWidth <= 768;
+            
+            if (wasMobile !== isMobile) {
+                AOS.refresh();
+                initAOS();
+            }
+        }, 250);
     });
 
     // Мобильное меню с анимациями

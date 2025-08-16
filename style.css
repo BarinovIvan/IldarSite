@@ -3281,4 +3281,21 @@ article.card:hover {
 
 .ui.button:hover {
   background-color: var(--accent-hover) !important;
+}
+
+/* Отключение анимаций для пользователей с медленным интернетом */
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Дополнительная оптимизация для устройств с низкой производительностью */
+@media (max-width: 768px) and (max-resolution: 150dpi) {
+    [data-aos] {
+        animation-duration: 0.2s !important;
+        transition-duration: 0.2s !important;
+    }
 } 
