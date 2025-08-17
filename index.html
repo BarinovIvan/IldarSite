@@ -598,6 +598,84 @@
         </div>
     </footer>
 
+    <!-- Color Picker for Design Testing -->
+    <div id="color-picker" class="color-picker" aria-hidden="true">
+        <div class="color-picker__panel">
+            <div class="color-picker__header">
+                <h3 class="color-picker__title">
+                    <i class="fas fa-palette"></i>
+                    Тестирование цветов
+                </h3>
+                <button class="color-picker__close" type="button" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="color-picker__content">
+                <div class="color-picker__controls">
+                    <div class="color-picker__group">
+                        <label class="color-picker__label" for="color-navy">
+                            Основной темный (Navy)
+                            <span class="color-picker__value" data-variable="--color-navy">#2c3e50</span>
+                        </label>
+                        <input type="color" id="color-navy" class="color-picker__input" value="#2c3e50" data-variable="--color-navy">
+                    </div>
+                    
+                    <div class="color-picker__group">
+                        <label class="color-picker__label" for="color-charcoal">
+                            Вторичный серый (Charcoal)
+                            <span class="color-picker__value" data-variable="--color-charcoal">#6c7b7f</span>
+                        </label>
+                        <input type="color" id="color-charcoal" class="color-picker__input" value="#6c7b7f" data-variable="--color-charcoal">
+                    </div>
+                    
+                    <div class="color-picker__group">
+                        <label class="color-picker__label" for="color-cream">
+                            Фоновый светлый (Cream)
+                            <span class="color-picker__value" data-variable="--color-cream">#fafafa</span>
+                        </label>
+                        <input type="color" id="color-cream" class="color-picker__input" value="#fafafa" data-variable="--color-cream">
+                    </div>
+                    
+                    <div class="color-picker__group">
+                        <label class="color-picker__label" for="color-steel-blue">
+                            Акцентный синий (Steel Blue)
+                            <span class="color-picker__value" data-variable="--color-steel-blue">#4a6fa5</span>
+                        </label>
+                        <input type="color" id="color-steel-blue" class="color-picker__input" value="#4a6fa5" data-variable="--color-steel-blue">
+                    </div>
+                    
+                    <div class="color-picker__group">
+                        <label class="color-picker__label" for="accent-hover">
+                            Hover состояние
+                            <span class="color-picker__value" data-variable="--accent-hover">#3d5a91</span>
+                        </label>
+                        <input type="color" id="accent-hover" class="color-picker__input" value="#3d5a91" data-variable="--accent-hover">
+                    </div>
+                </div>
+                
+                <div class="color-picker__actions">
+                    <button class="color-picker__button color-picker__button--reset" type="button">
+                        <i class="fas fa-undo"></i>
+                        Сбросить
+                    </button>                   
+                </div>
+                
+                <div class="color-picker__help">
+                    <p>Горячие клавиши:</p>
+                    <p><kbd>Ctrl + K</kbd> - открыть/закрыть</p>
+                    <p><kbd>Esc</kbd> - закрыть</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification for copied CSS -->
+    <div id="copy-notification" class="copy-notification">
+        <i class="fas fa-check"></i>
+        CSS скопирован в буфер обмена!
+    </div>
+
     <!-- Scripts -->
     <!-- jQuery (required for Semantic UI) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

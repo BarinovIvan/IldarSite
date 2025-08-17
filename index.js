@@ -373,4 +373,168 @@ $(document).ready(function() {
             $submit.prop('disabled', false).removeClass('button--clicked');
         }
     });
+
+    // Color Picker for Design Testing
+    const $colorPicker = $('#color-picker');
+    const $colorPickerClose = $('.color-picker__close');
+    const $colorInputs = $('.color-picker__input');
+    const $resetButton = $('.color-picker__button--reset');
+    const $exportButton = $('.color-picker__button--export');
+    const $copyNotification = $('#copy-notification');
+    
+    // Исходные значения цветов
+    const originalColors = {
+        '--color-navy': '#2c3e50',
+        '--color-charcoal': '#6c7b7f',
+        '--color-cream': '#fafafa',
+        '--color-steel-blue': '#4a6fa5',
+        '--accent-hover': '#3d5a91'
+    };
+    
+    let colorPickerOpen = false;
+
+    // Функция для обновления CSS переменной
+    function updateCSSVariable(variable, value) {
+        document.documentElement.style.setProperty(variable, value);
+        
+        // Обновляем отображаемое значение
+        const $valueDisplay = $(`.color-picker__value[data-variable="${variable}"]`);
+        $valueDisplay.text(value);
+    }
+
+    // Функция для открытия color picker
+    function openColorPicker() {
+        if (colorPickerOpen) return;
+        
+        colorPickerOpen = true;
+        $colorPicker.addClass('color-picker--open').attr('aria-hidden', 'false');
+        $('body').css('overflow', 'hidden');
+        
+        // Устанавливаем текущие значения в инпуты
+        $colorInputs.each(function() {
+            const $input = $(this);
+            const variable = $input.data('variable');
+            const currentValue = getComputedStyle(document.documentElement)
+                .getPropertyValue(variable).trim() || originalColors[variable];
+            $input.val(currentValue);
+        });
+    }
+
+    // Функция для закрытия color picker
+    function closeColorPicker() {
+        if (!colorPickerOpen) return;
+        
+        colorPickerOpen = false;
+        $colorPicker.removeClass('color-picker--open').attr('aria-hidden', 'true');
+        $('body').css('overflow', '');
+    }
+
+    // Функция для сброса цветов к исходным значениям
+    function resetColors() {
+        Object.entries(originalColors).forEach(([variable, value]) => {
+            updateCSSVariable(variable, value);
+            $(`input[data-variable="${variable}"]`).val(value);
+        });
+        
+        showNotification('Цвета сброшены к исходным значениям');
+    }
+
+    // Функция для экспорта CSS
+    function exportCSS() {
+        let css = ':root {\n';
+        
+        $colorInputs.each(function() {
+            const $input = $(this);
+            const variable = $input.data('variable');
+            const value = $input.val();
+            css += `  ${variable}: ${value};\n`;
+        });
+        
+        css += '}';
+        
+        // Копируем в буфер обмена
+        navigator.clipboard.writeText(css).then(() => {
+            showNotification('CSS скопирован в буфер обмена!');
+        }).catch(() => {
+            // Fallback для старых браузеров
+            const textArea = document.createElement('textarea');
+            textArea.value = css;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showNotification('CSS скопирован в буфер обмена!');
+        });
+    }
+
+    // Функция для показа уведомления
+    function showNotification(message) {
+        $copyNotification.text(message).addClass('copy-notification--show');
+        
+        setTimeout(() => {
+            $copyNotification.removeClass('copy-notification--show');
+        }, 3000);
+    }
+
+    // Обработчики событий для color picker
+    
+    // Горячие клавиши
+    $(document).on('keydown', function(e) {
+        // Ctrl + K или Cmd + K для открытия/закрытия
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            if (colorPickerOpen) {
+                closeColorPicker();
+            } else {
+                openColorPicker();
+            }
+        }
+        
+        // Escape для закрытия
+        if (e.key === 'Escape' && colorPickerOpen) {
+            closeColorPicker();
+        }
+    });
+
+    // Клик по кнопке закрытия
+    $colorPickerClose.on('click', closeColorPicker);
+
+    // Клик по overlay для закрытия
+    $colorPicker.on('click', function(e) {
+        if (e.target === this) {
+            closeColorPicker();
+        }
+    });
+
+    // Изменение цвета в real-time
+    $colorInputs.on('input', function() {
+        const $input = $(this);
+        const variable = $input.data('variable');
+        const value = $input.val();
+        
+        updateCSSVariable(variable, value);
+    });
+
+    // Кнопка сброса
+    $resetButton.on('click', function() {
+        if (confirm('Сбросить все цвета к исходным значениям?')) {
+            resetColors();
+        }
+    });
+
+    // Кнопка экспорта
+    $exportButton.on('click', exportCSS);
+
+    // Инициализация - устанавливаем исходные значения в отображение
+    Object.entries(originalColors).forEach(([variable, value]) => {
+        const $valueDisplay = $(`.color-picker__value[data-variable="${variable}"]`);
+        $valueDisplay.text(value);
+    });
+
+    // Добавляем подсказку в консоль для разработчиков
+    console.log('🎨 Color Picker активирован!');
+    console.log('Горячие клавиши:');
+    console.log('  Ctrl + K (Cmd + K) - открыть/закрыть color picker');
+    console.log('  Esc - закрыть color picker');
+    console.log('Используйте color picker для тестирования различных цветовых схем.');
 });
