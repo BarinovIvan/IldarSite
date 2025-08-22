@@ -1014,6 +1014,7 @@ nav.mobile-menu {
 @media (max-width: 768px) {
   .hero {
     padding: 0;
+    margin-bottom: 64px;
   }
   
   .hero__grid {
@@ -2066,7 +2067,7 @@ nav.mobile-menu {
 
 @media (max-width: 767px) {
   .benefits {
-    padding: 50px 0;
+    padding: 0 0 20px;
   }
   
   .benefits__content .section__content {
