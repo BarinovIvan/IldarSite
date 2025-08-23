@@ -822,9 +822,7 @@ nav.mobile-menu {
     max-width: 1140px;
   }
   
-  #contact {
-    margin-top: 100px;
-  }
+
   
   #contact::before {
     width: 140px;
@@ -836,9 +834,7 @@ nav.mobile-menu {
     max-width: 1320px;
   }
   
-  #contact {
-    margin-top: 120px;
-  }
+
   
   #contact::before {
     width: 160px;
@@ -850,9 +846,7 @@ nav.mobile-menu {
     max-width: 1440px;
   }
   
-  #contact {
-    margin-top: 140px;
-  }
+
   
   #contact::before {
     width: 180px;
@@ -861,7 +855,6 @@ nav.mobile-menu {
 
 /* hero ----------- */
 .hero {
-  padding: 40px 0 60px 0;
   background: var(--bg-primary);
   min-height: 85vh;
   display: flex;
@@ -982,7 +975,6 @@ nav.mobile-menu {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero {
-    padding: 30px 0 50px 0;
     min-height: auto;
   }
   
@@ -1013,8 +1005,7 @@ nav.mobile-menu {
 
 @media (max-width: 768px) {
   .hero {
-    padding: 0;
-    margin-bottom: 64px;
+    min-height: auto;
   }
   
   .hero__grid {
@@ -1098,8 +1089,40 @@ nav.mobile-menu {
 
 /* sections ----------- */
 .section {
-  padding: 48px 0;
-  margin: 24px 0 0;
+  padding: 80px 0;
+  margin: 0;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #contact.section {
+    padding: 54px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #contact.section {
+    padding: 32px 0;
+  }
+}
+
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 60px 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
 }
 
 .section--dark {
@@ -1231,7 +1254,6 @@ nav.mobile-menu {
 /* contact ----------- */
 #contact {
   position: relative;
-  margin-top: 80px;
   background: linear-gradient(135deg, var(--bg-primary) 0%, #fbfbfb 100%);
   border-top: 1px solid rgba(108, 123, 127, 0.15);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
@@ -1491,9 +1513,6 @@ nav.mobile-menu {
 
 
 @media (min-width: 769px) and (max-width: 1023px) {
-  #contact {
-    margin-top: 70px;
-  }
   
   #contact::before {
     width: 100px;
@@ -1572,9 +1591,6 @@ nav.mobile-menu {
 }
 
 @media (max-width: 768px) {
-  #contact {
-    margin-top: 60px;
-  }
   
   #contact::before {
     width: 80px;
@@ -1670,22 +1686,11 @@ nav.mobile-menu {
 
 /* benefits ----------- */
 .benefits {
-  padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
 
-@media (max-width: 1024px) {
-  #benefits .section__content {
-    margin-top: 100px;
-  }
-}
 
-@media (max-width: 768px) {
-  #benefits .section__content {
-    margin-top: 60px;
-  }
-}
 
 .benefits::before {
   content: '';
@@ -1926,7 +1931,7 @@ nav.mobile-menu {
 @media (max-width: 1200px) {
   .benefits__image--main {
     height: 70%;
-    margin-top: 80px;
+    margin-top: 20px;
   }
 }
 
@@ -1994,9 +1999,6 @@ nav.mobile-menu {
 
 
 @media (max-width: 1023px) {
-  .benefits {
-    padding: 60px 0;
-  }
   
 
   .benefits__layout {
@@ -2036,6 +2038,7 @@ nav.mobile-menu {
   .benefits__content .section__content {
     text-align: center;
     margin-bottom: 40px;
+    margin-top: 80px;
   }
   
   .benefits__content .section__title {
@@ -2066,12 +2069,10 @@ nav.mobile-menu {
 }
 
 @media (max-width: 767px) {
-  .benefits {
-    padding: 0 0 20px;
-  }
   
   .benefits__content .section__content {
     margin-bottom: 32px;
+    margin-top: 40px;
   }
   
   .benefits__images-mobile {
@@ -3099,8 +3100,6 @@ article.card:hover {
 
 /* footer ----------- */
 .footer {
-  padding: 80px 0 40px 0;
-  margin-top: 0;
   background: var(--bg-dark);
   color: var(--text-light);
 }
@@ -3378,9 +3377,6 @@ article.card:hover {
 
 
 @media (max-width: 767px) {
-  .footer {
-    padding: 60px 0 32px 0;
-  }
   
   .footer__grid {
     gap: 40px;
@@ -3439,9 +3435,6 @@ article.card:hover {
 }
 
 @media (min-width: 1440px) {
-  .footer {
-    padding: 100px 0 50px 0;
-  }
   
   .footer__content {
     max-width: 1320px;
