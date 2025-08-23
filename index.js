@@ -373,4 +373,27 @@ $(document).ready(function() {
             $submit.prop('disabled', false).removeClass('button--clicked');
         }
     });
+
+    initServicesTabs();
 });
+
+function initServicesTabs() {
+    const tabs = document.querySelectorAll('.services-tab');
+    const contents = document.querySelectorAll('.service-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetService = tab.dataset.service;
+                        
+            tabs.forEach(t => t.classList.remove('services-tab--active'));
+            contents.forEach(c => c.classList.remove('service-content--active'));
+                        
+            tab.classList.add('services-tab--active');
+                        
+            const targetContent = document.querySelector(`[data-service-content="${targetService}"]`);
+            if (targetContent) {
+                targetContent.classList.add('service-content--active');
+            }
+        });
+    });
+}

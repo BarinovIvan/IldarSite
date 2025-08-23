@@ -346,98 +346,192 @@
                         Услуги
                     </span>
                 </h2>
-                <p class="section__subtitle">Подберу решения под ваши задачи: быстро, рационально, без лишних трат</p>
             </div>
 
-            <div class="services-list">
-                <article class="service-item" data-aos="fade-up">
-                    <header class="service-item__header">
-                        <h3 class="service-item__title">Бесплатная консультация</h3>
-                        <div class="service-item__meta">
-                            <span class="service-badge" aria-label="Длительность">15–20 минут</span>
-                            <span class="service-badge" aria-label="Формат">Онлайн</span>
+            <div class="services-tabs" data-aos="fade-up" data-aos-delay="100">                
+                <div class="services-nav-wrapper">
+                    <nav class="services-nav">
+                    <button class="services-tab services-tab--active" data-service="consultation">
+                        Консультация
+                    </button>
+                    <button class="services-tab" data-service="wardrobe">
+                        Разбор гардероба
+                    </button>
+                    <button class="services-tab" data-service="shopping">
+                        Шопинг сопровождение
+                    </button>
+                    <button class="services-tab" data-service="event">
+                        Образ на мероприятие
+                    </button>
+                    </nav>
+                </div>
+                
+                <div class="services-content">                    
+                    <div class="service-content service-content--active" data-service-content="consultation">
+                        <h3 class="service-title">КОНСУЛЬТАЦИЯ</h3>
+                        
+                        <div class="service-body">
+                            <p class="service-intro">
+                                <strong>Консультация проходит в онлайн формате, где мы подробно обсудим:</strong>
+                            </p>
+                            
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    ваши задачи и пожелания относительно стиля и гардероба;
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    привычный ритм жизни, вкусы и предпочтения в одежде;
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    особенности фигуры и внешности и другие важные нюансы.
+                                </li>
+                            </ul>
+                            
+                            <p class="service-description">
+                                После этого мы составим список необходимых вещей, определим подходящий ценовой сегмент магазинов и ориентировочный бюджет (если речь идёт о шопинге), либо проанализируем ваш текущий гардероб (в случае разбора гардероба). Также согласуем удобные дату и время для проведения разбора гардероба или сопровождения на шопинге.
+                            </p>                            
                         </div>
-                    </header>
-                    <p class="service-item__description">
-                        Мы обсудим ваши предпочтения в стиле, наметим цели, определим бюджет на шопинг, сегмент магазинов и назначим день следующей встречи (шопинг/разбор гардероба).
-                    </p>
-                    <div class="service-item__price">Бесплатно</div>
-                </article>
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <span class="service-detail-label">Цена:</span>
+                                <span class="service-detail-value">Бесплатно</span>
+                            </div>
+                            <div class="service-detail">
+                                <span class="service-detail-label">Формат:</span>
+                                <span class="service-detail-value">онлайн</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <article class="service-item" data-aos="fade-up" data-aos-delay="100">
-                    <header class="service-item__header">
-                        <h3 class="service-item__title">Разбор гардероба</h3>
-                        <div class="service-item__meta">
-                            <span class="service-badge" aria-label="Длительность">2–3 часа</span>
-                            <span class="service-badge" aria-label="Формат">Дома / Онлайн</span>
-                        </div>
-                    </header>
-                    <ul class="service-item__features">
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Критически оценим вещи: что оставить, что убрать
+                    <div class="service-content" data-service-content="wardrobe">
+                        <h3 class="service-title">РАЗБОР ГАРДЕРОБА</h3>
+                        
+                        <div class="service-body">
+                            <p class="service-intro">
+                                <strong>Разбор гардероба — это лучший старт для серьёзных изменений в стиле. В процесс входит:</strong>
+                            </p>
+                            
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    анализ всей одежды, обуви и аксессуаров;
+                                </li>
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    оценка вещей с точки зрения актуальности, качества, посадки и ваших текущих задач;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Соберём капсулу на сезон
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    подбор стильных комбинаций и создание свежих сочетаний;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Список точечных докупок под ваш бюджет
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    фиксация готовых образов на ваш телефон для удобства.
                         </li>
                     </ul>
-                    <div class="service-item__price">от 5 000 ₽</div>
-                </article>
-
-                <article class="service-item" data-aos="fade-up" data-aos-delay="200">
-                    <header class="service-item__header">
-                        <h3 class="service-item__title">Шоппинг‑сопровождение</h3>
-                        <div class="service-item__meta">
-                            <span class="service-badge" aria-label="Длительность">2–3 часа</span>
-                            <span class="service-badge" aria-label="Формат">Оффлайн</span>
+                            
+                            <p class="service-description">
+                                Что вы получите в итоге: большое количество вариантов комплектов из уже существующих вещей (даже при их ограниченном числе); список недостающих элементов, которые стоит приобрести; готовые практичные образы на каждый день; порядок в шкафу и лёгкость в сборах за несколько минут.
+                            </p>
+                                        
                         </div>
-                    </header>
-                    <ul class="service-item__features">
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Подберём 12–15 вещей
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <span class="service-detail-label">Цена:</span>
+                                <span class="service-detail-value">от 15 000 ₽</span>
+                            </div>
+                            <div class="service-detail">
+                                <span class="service-detail-label">Формат:</span>
+                                <span class="service-detail-value">офлайн/онлайн</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-content" data-service-content="shopping">
+                        <h3 class="service-title">ШОПИНГ СОПРОВОЖДЕНИЕ</h3>
+                        
+                        <div class="service-body">
+                            <p class="service-intro">
+                                <strong>Если вам не нравится самостоятельно ходить по магазинам, трудно подобрать вещи из-за нестандартных параметров, вы часто покупаете однотипную одежду или хотите полностью обновить стиль — шопинг с сопровождением станет отличным решением. Процесс организован максимально удобно:</strong>
+                            </p>
+                            
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    поход по магазинам занимает не более 3–4 часов;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Соберём 45+ готовых образов
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    посещаем 3–5 магазинов в пределах одной локации;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Сэкономим время и деньги благодаря моим персональным скидкам
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    в зависимости от задач и бюджета приобретаем от 15–20 и более единиц одежды (включая обувь и аксессуары), из которых можно составить 45+ готовых образов.
                         </li>
                     </ul>
-                    <div class="service-item__price">от 15 000 ₽</div>
-                </article>
-
-                <article class="service-item" data-aos="fade-up" data-aos-delay="300">
-                    <header class="service-item__header">
-                        <h3 class="service-item__title">Онлайн‑консультация</h3>
-                        <div class="service-item__meta">
-                            <span class="service-badge" aria-label="Длительность">60–90 минут</span>
-                            <span class="service-badge" aria-label="Формат">Онлайн</span>
+                            
+                            <p class="service-description">
+                                Дополнительно я даю рекомендации по подбору парфюма, уходу за вещами и деталям, которые помогут подчеркнуть ваш стиль. После шопинга вы получаете онлайн-поддержку в течение 2 месяцев — я отвечаю на любые вопросы, связанные с образом и гардеробом.
+                            </p>                                                    
                         </div>
-                    </header>
-                    <ul class="service-item__features">
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Личная формула стиля и примеры образов
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <span class="service-detail-label">Цена:</span>
+                                <span class="service-detail-value">от 20 000 ₽</span>
+                            </div>
+                            <div class="service-detail">
+                                <span class="service-detail-label">Формат:</span>
+                                <span class="service-detail-value">офлайн/онлайн</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-content" data-service-content="event">
+                        <h3 class="service-title">ОБРАЗ НА МЕРОПРИЯТИЕ</h3>
+                        
+                        <div class="service-body">
+                            <p class="service-intro">
+                                <strong>Эта услуга подойдёт вам, если нужно подобрать идеальный наряд для особого события — свадьбы, деловой встречи, вечеринки или фотосессии. Я помогу:</strong>
+                            </p>
+                            
+                            <ul class="service-features">
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    анализирую формат мероприятия и ваши пожелания;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Шопинг‑лист под ваш бюджет
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    подбираю одежду, обувь и аксессуары;
                         </li>
-                        <li class="service-item__feature">
-                            <i class="fas fa-circle service-item__bullet" aria-hidden="true"></i>
-                            Поддержка сообщением после созвона
+                                <li class="service-feature">
+                                    <i class="fas fa-circle service-bullet" aria-hidden="true"></i>
+                                    сопровождаю вас на шопинге или подбираю варианты онлайн.
                         </li>
                     </ul>
-                    <div class="service-item__price">от 6 000 ₽</div>
-                </article>
+                            
+                            <p class="service-description">
+                                В результате вы получаете продуманный комплект, который подчеркнёт вашу индивидуальность, будет уместным и эффектным, а главное — подарит ощущение гармонии и уверенности.
+                            </p>                            
+                        </div>
+                        
+                        <div class="service-details">
+                            <div class="service-detail">
+                                <span class="service-detail-label">Цена:</span>
+                                <span class="service-detail-value">от 10 000 ₽</span>
+                            </div>
+                            <div class="service-detail">
+                                <span class="service-detail-label">Формат:</span>
+                                <span class="service-detail-value">офлайн/онлайн</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <aside class="services__note" data-aos="fade-up" data-aos-delay="150">
