@@ -194,25 +194,55 @@ $(document).ready(function() {
     $('.ui.popup').popup();
 
 
-    // Reviews карусель
+    // Reviews карусели
     if (window.Swiper) {
-        const reviewsSwiper = new Swiper('.reviews__slider', {
+        // Фото результатов
+        window.reviewsPhotoSwiper = new Swiper('.reviews__slider', {
             slidesPerView: 1,
             spaceBetween: 16,
             loop: true,
+            autoHeight: true,
+            centeredSlides: true,
             autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
+                delay: 5000,
+                disableOnInteraction: true,
                 pauseOnMouseEnter: true,
             },
-
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.reviews__slider .swiper-button-next',
+                prevEl: '.reviews__slider .swiper-button-prev',
+            },
+            breakpoints: {
+                768: { 
+                    slidesPerView: 1,
+                    spaceBetween: 16 
+                },
+                1200: { 
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                    centeredSlides: true
+                },
+                1440: { 
+                    slidesPerView: 1,
+                    spaceBetween: 32,
+                    centeredSlides: true
+                }
+            }
+        });
+        
+        // Текстовые отзывы
+        window.reviewsTextSwiper = new Swiper('.reviews__slider-text', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoHeight: true,
+            navigation: {
+                nextEl: '.reviews__slider-text .swiper-button-next',
+                prevEl: '.reviews__slider-text .swiper-button-prev',
             },
             breakpoints: {
                 768: { slidesPerView: 1 },
-                1200: { slidesPerView: 2 },
+                1200: { slidesPerView: 1 },
             }
         });
     } else {
@@ -375,6 +405,7 @@ $(document).ready(function() {
     });
 
     initServicesTabs();
+    initReviewsTabs();
 });
 
 function initServicesTabs() {
@@ -393,6 +424,37 @@ function initServicesTabs() {
             const targetContent = document.querySelector(`[data-service-content="${targetService}"]`);
             if (targetContent) {
                 targetContent.classList.add('service-content--active');
+            }
+        });
+    });
+}
+
+function initReviewsTabs() {
+    const tabs = document.querySelectorAll('.reviews-tab');
+    const contents = document.querySelectorAll('.review-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const targetReview = tab.dataset.review;
+            
+            // Убираем активный класс со всех табов и контентов
+            tabs.forEach(t => t.classList.remove('reviews-tab--active'));
+            contents.forEach(c => c.classList.remove('review-content--active'));
+            
+            // Добавляем активный класс к нажатому табу
+            tab.classList.add('reviews-tab--active');
+            
+            // Находим и показываем соответствующий контент
+            const targetContent = document.querySelector(`[data-review-content="${targetReview}"]`);
+            if (targetContent) {
+                targetContent.classList.add('review-content--active');
+                
+                // Перезапускаем автоплей для активного слайдера
+                if (targetReview === 'photo' && window.reviewsPhotoSwiper) {
+                    window.reviewsPhotoSwiper.autoplay.start();
+                } else if (targetReview === 'text' && window.reviewsTextSwiper) {
+                    window.reviewsTextSwiper.autoplay.start();
+                }
             }
         });
     });

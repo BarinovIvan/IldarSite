@@ -551,31 +551,84 @@
                 </h2>
             </div>
 
-            <div class="reviews">
-                <div class="swiper reviews__slider" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide review-slide">
-                            <img src="assets/images/review1.webp" alt="Отзыв клиента 1" class="review-slide__image">
-                        </div>
-                        <div class="swiper-slide review-slide">
-                            <img src="assets/images/review2.webp" alt="Отзыв клиента 2" class="review-slide__image">
-                        </div>
-                        <div class="swiper-slide review-slide">
-                            <img src="assets/images/review3.webp" alt="Отзыв клиента 3" class="review-slide__image">
-                        </div>
-                        <div class="swiper-slide review-slide">
-                            <img src="assets/images/review4.webp" alt="Отзыв клиента 4" class="review-slide__image">
-                        </div>
-                        <div class="swiper-slide review-slide review-slide--avito">
-                            <img src="assets/images/review-more.webp" alt="Все отзывы на Авито — скриншот" class="review-slide__image">
-                            <a class="review-slide__badge" href="https://www.avito.ru/moskva/predlozheniya_uslug/muzhskoy_stilist_po_podboru_odezhdy.razbor_garderoba_4497104070" target="_blank" rel="noopener noreferrer">
-                                <span class="review-slide__badge-text">Все отзывы на Авито</span>
-                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
-                            </a>
+            <div class="reviews-tabs">
+                <div class="reviews-nav-wrapper">
+                    <nav class="reviews-nav">
+                        <button class="reviews-tab reviews-tab--active" data-review="photo">
+                            Фото <br class="reviews-tab__br">результатов
+                        </button>
+                        <button class="reviews-tab" data-review="text">
+                            Отзывы <br class="reviews-tab__br">клиентов
+                        </button>
+                    </nav>
+                </div>
+                
+                <div class="reviews-content">                
+                    <div class="review-content review-content--active" data-review-content="photo">
+                        <div class="swiper reviews__slider" data-aos="fade-up" data-aos-delay="100">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/review1.webp" alt="Фото результата работы 1" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/review2.webp" alt="Фото результата работы 2" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/review3.webp" alt="Фото результата работы 3" class="review-slide__image">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
                     </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                                        
+                    <div class="review-content" data-review-content="text">
+                        <div class="swiper reviews__slider-text" data-aos="fade-up" data-aos-delay="100">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-1.webp" alt="Отзыв клиента 1" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-2.webp" alt="Отзыв клиента 2" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-3.webp" alt="Отзыв клиента 3" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-4.webp" alt="Отзыв клиента 4" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-5.webp" alt="Отзыв клиента 5" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-6.webp" alt="Отзыв клиента 6" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-7.webp" alt="Отзыв клиента 7" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-8.webp" alt="Отзыв клиента 8" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-9.webp" alt="Отзыв клиента 9" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-10.webp" alt="Отзыв клиента 10" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-11.webp" alt="Отзыв клиента 11" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-12.webp" alt="Отзыв клиента 12" class="review-slide__image">
+                                </div>
+                                <div class="swiper-slide review-slide">
+                                    <img src="assets/images/reviews/text-review-13.webp" alt="Отзыв клиента 13" class="review-slide__image">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
