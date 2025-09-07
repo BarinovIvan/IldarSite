@@ -1203,7 +1203,6 @@ nav.mobile-menu {
 
 /* reviews ----------- */
 .reviews-tabs {
-  max-width: 900px;
   margin: 40px auto 0;
 }
 
@@ -1271,6 +1270,11 @@ nav.mobile-menu {
 
 .review-content--active {
   display: block;
+  overflow: visible;
+}
+
+.reviews-content {
+  overflow: visible;
 }
 
 #reviews .section__title {
@@ -1280,6 +1284,7 @@ nav.mobile-menu {
 .reviews__slider,
 .reviews__slider-text {
   position: relative;
+  overflow: visible;
 }
 
 .reviews__slider .swiper-wrapper,
@@ -1287,6 +1292,7 @@ nav.mobile-menu {
   transition-property: transform, height;
   transition-duration: 0.3s;
   transition-timing-function: ease;
+  align-items: center;
 }
 
 .review-slide {
@@ -1859,6 +1865,47 @@ nav.mobile-menu {
   .reviews__slider-text .swiper-button-prev::after,
   .reviews__slider-text .swiper-button-next::after {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .reviews__slider .swiper-button-prev,
+  .reviews__slider-text .swiper-button-prev {
+    left: -6%;
+  }
+  
+  .reviews__slider .swiper-button-next,
+  .reviews__slider-text .swiper-button-next {
+    right: -6%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .reviews__slider .swiper-button-prev,
+  .reviews__slider-text .swiper-button-prev {
+    left: -8%;
+  }
+  
+  .reviews__slider .swiper-button-next,
+  .reviews__slider-text .swiper-button-next {
+    right: -8%;
+  }
+  
+  .reviews__slider,
+  .reviews__slider-text {
+    overflow: visible !important;
+  }
+  
+  .review-content--active {
+    overflow: visible !important;
+  }
+  
+  .reviews-content {
+    overflow: visible !important;
+  }
+  
+  #reviews .container {
+    overflow: visible !important;
   }
 }
 

@@ -218,14 +218,14 @@ $(document).ready(function() {
                     spaceBetween: 16 
                 },
                 1200: { 
-                    slidesPerView: 1,
-                    spaceBetween: 24,
-                    centeredSlides: true
+                    slidesPerView: 2,
+                    spaceBetween: 64,
+                    centeredSlides: false
                 },
                 1440: { 
-                    slidesPerView: 1,
-                    spaceBetween: 32,
-                    centeredSlides: true
+                    slidesPerView: 2,
+                    spaceBetween: 128,
+                    centeredSlides: false
                 }
             }
         });
@@ -242,7 +242,18 @@ $(document).ready(function() {
             },
             breakpoints: {
                 768: { slidesPerView: 1 },
-                1200: { slidesPerView: 1 },
+                1200: { 
+                    slidesPerView: 2,
+                    spaceBetween: 64,
+                    centeredSlides: false,
+                    autoHeight: false,
+                },
+                1440: { 
+                    slidesPerView: 2,
+                    spaceBetween: 128,
+                    centeredSlides: false,
+                    autoHeight: false,
+                }
             }
         });
     } else {
