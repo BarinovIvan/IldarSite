@@ -868,6 +868,77 @@ nav.mobile-menu {
   min-height: 60vh;
 }
 
+/
+@media (min-height: 900px) and (min-width: 1024px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero__grid {
+    align-items: center;
+  }
+  
+  .hero__content {
+    align-self: center;
+  }
+}
+
+@media (min-height: 700px) and (max-height: 899px) and (min-width: 1024px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+  
+  .hero__grid {
+    align-items: flex-start;
+  }
+  
+  .hero__content {
+    align-self: flex-start;
+  }
+}
+
+@media (max-height: 699px) and (min-width: 1024px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 20px;
+    min-height: auto;
+  }
+  
+  .hero__grid {
+    align-items: flex-start;
+    min-height: auto;
+  }
+  
+  .hero__content {
+    align-self: flex-start;
+  }
+}
+
+@media (min-height: 800px) and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    align-items: center;
+    min-height: 80vh;
+  }
+  
+  .hero__grid {
+    align-items: center;
+  }
+}
+
+@media (max-height: 799px) and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 40px;
+    min-height: auto;
+  }
+  
+  .hero__grid {
+    align-items: flex-start;
+  }
+}
+
 .hero__content {
   flex: 1;
   max-width: 600px;
