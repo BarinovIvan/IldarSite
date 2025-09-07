@@ -203,6 +203,7 @@ $(document).ready(function() {
             loop: true,
             autoHeight: true,
             centeredSlides: true,
+            lazy: true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: true,
@@ -236,6 +237,12 @@ $(document).ready(function() {
             spaceBetween: 16,
             loop: true,
             autoHeight: true,
+            lazy: true,       
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true,
+                pauseOnMouseEnter: true,
+            },     
             navigation: {
                 nextEl: '.reviews__slider-text .swiper-button-next',
                 prevEl: '.reviews__slider-text .swiper-button-prev',

@@ -1336,16 +1336,10 @@ nav.mobile-menu {
 }
 
 @media (max-width: 768px) {
-  .reviews-tab {
-    font-size: 16px;
-    padding: 16px 31px;
-  }
-}
-
-@media (max-width: 767px) {
   .reviews-tabs {
     max-width: none;
     margin-top: 24px;
+    font-size: 16px;
   }
 
   .reviews-tab__br {
@@ -1389,18 +1383,15 @@ nav.mobile-menu {
   .reviews-nav  {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
+
+  .review-slide__image {
+    max-width: 480px;
+  }
 }
 
 @media (min-width: 1024px) {  
   .reviews-tab__br {
     display: none;
-  }
-}
-
-
-@media (min-width: 1200px) {  
-  .review-slide__image {
-    max-width: 480px;
   }
 }
 
@@ -1851,6 +1842,15 @@ nav.mobile-menu {
   opacity: 0.6;
 }
 
+@media (max-width: 768px) {
+  .reviews__slider .swiper-button-prev,
+  .reviews__slider .swiper-button-next,
+  .reviews__slider-text .swiper-button-prev,
+  .reviews__slider-text .swiper-button-next {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
   .reviews__slider .swiper-button-prev,
   .reviews__slider .swiper-button-next,
@@ -1912,6 +1912,22 @@ nav.mobile-menu {
 .swiper-pagination-bullet { background: rgba(44,62,80,0.25); }
 
 .swiper-pagination-bullet-active { background: var(--accent-primary); }
+
+.swiper-lazy-preloader-white {
+  border-color: rgba(255, 255, 255, 0.6);
+  border-top-color: transparent;
+}
+
+@keyframes swiper-preloader-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.swiper-lazy-loaded {
+  opacity: 1;
+}
+
 
 /* benefits ----------- */
 .benefits {
