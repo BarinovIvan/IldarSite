@@ -201,7 +201,7 @@ $(document).ready(function() {
             slidesPerView: 1,
             spaceBetween: 16,
             loop: true,
-            autoHeight: true,
+            autoHeight: false,
             centeredSlides: true,
             lazy: true,
             autoplay: {
